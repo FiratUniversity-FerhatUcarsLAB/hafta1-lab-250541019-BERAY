@@ -1,4 +1,104 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No: 250541019
+AD-SOYAD: Beray AKAR
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+İdeal kahve demleme görevini CHATGPT kullanarak yaptım.
+"İdeal kahve demleme yöntemiyle ilgili sıcaklık, öğütme boyutu, demleme derecesini dikkate alarak, bir algoritma çıkar." 
+CHATGPT'nin cevabı:
+1. Kullanıcıdan kahve tipi, yöntem ve kavurma derecesini al.
+2. Öğütme boyutunu yönteme göre belirle:
+      if yöntem == "espresso" → grind = "ince"
+      if yöntem == "pour-over" → grind = "orta"
+      if yöntem == "french press" → grind = "kalın"
+3. Su sıcaklığını kavurma derecesine göre ayarla:
+      if kavurma == "açık" → T = 94°C
+      if kavurma == "orta" → T = 92°C
+      if kavurma == "koyu" → T = 90°C
+4. Kahve-su oranını yönteme göre ayarla:
+      if yöntem == "espresso" → oran = 1:2
+      else if yöntem == "pour-over" → oran = 1:16
+      else if yöntem == "french press" → oran = 1:15
+      else → oran = 1:17
+5. Su miktarına göre kahve miktarını hesapla:
+      K = S / oran
+6. Zamanlayıcıyı yönteme göre ayarla:
+      espresso → 25 sn
+      pour-over → 3 dk
+      french press → 4 dk
+7. Demleme:
+      a. Su ısınsın → T
+      b. Filtreyi ıslat ve kahveyi ekle.
+      c. Blooming için 30 ml suyu dök, 30 sn bekle.
+      d. Kalan suyu yavaşça dairesel hareketlerle ekle.
+      e. Süre dolunca kahveyi süz ve servis et.
+8. Tat testi yap → “çok acı” veya “çok ekşi” ise parametreleri optimize et:
+      if acı → öğütme boyutunu büyüt, sıcaklığı düşür
+      if ekşi → öğütme boyutunu küçült, sıcaklığı artır
+9. Sonuç: İdeal dengeye ulaşana kadar 8. adımı yinele.
+
+İdeal seviyede bir kahvenin hangi koşullar altında ortaya çıkabileceğine dair bir parametre istedim.
+"İdeal parametre seti oluştur."
+CHATGPT'nin cevabı:
+Öğütme: orta
+Sıcaklık: 92°C
+Oran: 1:16
+Süre: 3 dk
+
+Ve son olarak bu algoritmanın basitleştirilmiş bir flow chartını oluşturmasını istedim.
+"Bana bu algoritmanın basit flow chartını oluştur."
+CHATGPT'nin cevabı:
+            ┌──────────────────────────┐
+            │  Başla ☕                │
+            └──────────┬───────────────┘
+                       │
+                       ▼
+          ┌──────────────────────────┐
+          │ Kahve türü ve yöntemi seç│
+          └──────────┬───────────────┘
+                     │
+                     ▼
+       ┌───────────────────────────┐
+       │ Kahve : Su oranı = 1 : 15 │
+       └──────────┬────────────────┘
+                  │
+                  ▼
+     ┌──────────────────────────────┐
+     │ Suyu 90–95°C'ye ısıt         │
+     └──────────┬───────────────────┘
+                │
+                ▼
+     ┌──────────────────────────────┐
+     │ Öğütme boyutunu ayarla       │
+     │ Espresso → ince              │
+     │ Pour-over → orta             │
+     │ French press → kalın         │
+     └──────────┬───────────────────┘
+                │
+                ▼
+     ┌──────────────────────────────┐
+     │ Az su ekle, 30 sn bekle      │
+     │ (Blooming aşaması)           │
+     └──────────┬───────────────────┘
+                │
+                ▼
+     ┌──────────────────────────────┐
+     │ Kalan suyu dök, demlemeyi bitir│
+     └──────────┬───────────────────┘
+                │
+                ▼
+     ┌──────────────────────────────┐
+     │ Tat testi yap:               │
+     │ - Acı → sıcaklığı düşür,     │
+     │   öğütmeyi kalınlaştır       │
+     │ - Ekşi → sıcaklığı artır,    │
+     │   öğütmeyi incelt            │
+     └──────────┬───────────────────┘
+                │
+                ▼
+            ┌──────────────────────┐
+            │   İdeal kahve hazır! │
+            └──────────────────────┘
+
+
+
+
