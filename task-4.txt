@@ -2,6 +2,7 @@
 AD-SOYAD:Beray AKAR
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
 Adil pasta paylaşımı ile ilgili olan görevi seçtim ve CHATGPT ile yaptım.
+
 AdilPaylas(Pasta P, Kişiler G):
     n = |G|
     Eğer n == 1 ise:
@@ -25,6 +26,7 @@ AdilPaylas(Pasta P, Kişiler G):
     AdilPaylas(P1, G1)
     AdilPaylas(P2, G2)
 Kişiler arasında anlaşmazlık çıkması olasılığını göz önünde bulundurdum ve araştırırken öğrendiğim 'conflict resolution' mekanizmasıyla yeni bir pseduocode oluşturdum.
+
 AdilPaylas(Pasta P, Kişiler G):
     n = |G|
     Eğer n == 1 ise:
