@@ -1,4 +1,65 @@
-Öğrenci No:
-AD-SOYAD:
-
+Öğrenci No: 250541019
+AD-SOYAD:Beray AKAR
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+Adil pasta paylaşımı ile ilgili olan görevi seçtim ve CHATGPT ile yaptım.
+AdilPaylas(Pasta P, Kişiler G):
+    n = |G|
+    Eğer n == 1 ise:
+        P'yi G[1]'e ver
+        Dön
+    
+    Bir "kesici" kişi seç: K = G[1]
+    K pastayı değeri eşit iki parçaya böler: P1, P2
+
+    Her kişi i ∈ G için:
+        Eğer i’ye göre Değer(P1) ≥ Değer(P2):
+            tercih[i] = 1
+        Aksi halde:
+            tercih[i] = 2
+
+    G1 = { i ∈ G | tercih[i] == 1 }
+    G2 = { i ∈ G | tercih[i] == 2 }
+
+    Grupları mümkünse eşit sayıda kişi olacak şekilde ayarla
+
+    AdilPaylas(P1, G1)
+    AdilPaylas(P2, G2)
+Kişiler arasında anlaşmazlık çıkması olasılığını göz önünde bulundurdum ve araştırırken öğrendiğim 'conflict resolution' mekanizmasıyla yeni bir pseduocode oluşturdum.
+AdilPaylas(Pasta P, Kişiler G):
+    n = |G|
+    Eğer n == 1 ise:
+        P'yi G[1]'e ver
+        Dön
+
+    K = G[1]   # kesici/arabulucu
+    K pastayı değerce eşit iki parçaya böler: P1, P2
+
+    Her kişi i ∈ G için:
+        tercih[i] = 1 veya 2 (hangi parçayı daha değerli buluyorsa)
+
+    G1 = { i ∈ G | tercih[i] == 1 }
+    G2 = { i ∈ G | tercih[i] == 2 }
+
+    # Çatışma kontrolü
+    Eğer |G1| > n/2 veya |G2| > n/2 ise:
+        # Kavga tespit edildi
+        Yaz("Kavga çıktı! Arabulucu devrede.")
+        KavgaCoz(G1, G2, P1, P2, G)
+        Dön
+
+    AdilPaylas(P1, G1)
+    AdilPaylas(P2, G2)
+
+
+KavgaCoz(G1, G2, P1, P2, G):
+    Eğer |G1| > |G2|:
+        # G1 kavgalı
+        Arabulucu = RastgeleSeç(G1)
+        (P1a, P1b) = Arabulucu.pastayi_bol(P1)
+        AdilPaylas(P1a, G1’nin yarısı)
+        AdilPaylas(P1b, G1’nin diğer yarısı)
+    Aksi halde:
+        Aynı şekilde G2 için uygula
+
+
+
