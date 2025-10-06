@@ -4,7 +4,7 @@ AD-SOYAD: Beray AKAR
 Lütfen istediğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya listeleyiniz:
 Sudoku çözme yaklaşımlarına ait olan görevi seçtim ve CHATGPT'yi kullanarak yaptım.
 
-'Sudoku çözme yaklaşımına ait bir pseudocode yaz.'
+"Sudoku çözme yaklaşımına ait bir pseudocode yaz."
 CHATGPT'NİN cevabı:
 
 Tabii! Aşağıda geri izleme yaklaşımını temel alan sade bir Sudoku çözme algoritması yer alıyor:
