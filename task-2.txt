@@ -1,3 +1,78 @@
 Öğrenci No: 250541019
 AD-SOYAD: Beray AKAR
 
+Lütfen istediğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya listeleyiniz:
+Sudoku çözme yaklaşımlarına ait olan görevi seçtim ve CHATGPT'yi kullanarak yaptım.
+
+Fonksiyon BosHucreYok(tahta):
+    her hücre için:
+        eğer tahta[satir][sutun] = 0 ise
+            döndür YANLIŞ
+    döndür DOĞRU
+
+
+Fonksiyon IlkBosHucre(tahta):
+    her hücre için:
+        eğer tahta[satir][sutun] = 0 ise
+            döndür (satir, sutun)
+
+
+Fonksiyon GecerliMi(tahta, satir, sutun, sayi):
+    // Satır kontrolü
+    eğer sayi satir içinde zaten varsa
+        döndür YANLIŞ
+
+    // Sütun kontrolü
+    eğer sayi sutun içinde zaten varsa
+        döndür YANLIŞ
+
+    // 3x3 kutu kontrolü
+    kutuSatir ← (satir // 3) * 3
+    kutuSutun ← (sutun // 3) * 3
+    3x3 kutudaki hücreleri kontrol et:
+        eğer sayi varsa döndür YANLIŞ
+
+    döndür DOĞRU
+
+Yanlış yerleştirmelerden dolayı oluşabilecek bir problemde bunu nasıl düzeltebileceğimize dair bir pseudocode yazdırdım.
+İlk başta yanlış yerleştirmeyi düzeltecek pseudocode:
+
+Fonksiyon DuzeltHata(tahta, satir, sutun, sayi):
+    // 1. Sayıyı yerleştir
+    tahta[satir][sutun] ← sayi
+
+    // 2. Çakışma kontrolü
+    eğer CakismaVarMi(tahta, satir, sutun) ise
+        // 3. Hatalı hamleyi geri al
+        tahta[satir][sutun] ← 0
+        yaz("Hatalı yerleştirme! Hücre sıfırlandı.")
+        döndür YANLIŞ
+    aksi halde
+        döndür DOĞRU
+Ve daha sonra çakışmalardan dolayı oluşabilecek herhangi bir hataya karşı kontrol fonksiyonu çıkardım:
+
+Fonksiyon CakismaVarMi(tahta, satir, sutun):
+    sayi ← tahta[satir][sutun]
+
+    // Satır kontrolü
+    eğer sayi başka bir hücrede aynı satırda varsa
+        döndür DOĞRU
+
+    // Sütun kontrolü
+    eğer sayi başka bir hücrede aynı sütunda varsa
+        döndür DOĞRU
+
+    // 3x3 kutu kontrolü
+    kutuSatir ← (satir // 3) * 3
+    kutuSutun ← (sutun // 3) * 3
+    eğer sayi aynı 3x3 kutuda başka bir yerde varsa
+        döndür DOĞRU
+
+    döndür YANLIŞ
+Ve son olarak bunun bir kullanım örneğini çıkardım:
+eğer DuzeltHata(tahta, 4, 5, 7) = DOĞRU ise
+    yaz("Sayı başarıyla yerleştirildi.")
+aksi halde
+    yaz("Yerleştirme reddedildi, hücre temizlendi.")
+
+
