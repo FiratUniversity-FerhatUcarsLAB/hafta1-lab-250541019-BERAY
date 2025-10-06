@@ -3,6 +3,10 @@ AD-SOYAD:Beray AKAR
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
 Adil pasta paylaşımı ile ilgili olan görevi seçtim ve CHATGPT ile yaptım.
 
+"Adil pasta paylaşımına dair bir algoritma yaz."
+
+CHATGPT'nin cevabı:
+
 AdilPaylas(Pasta P, Kişiler G):
     n = |G|
     Eğer n == 1 ise:
