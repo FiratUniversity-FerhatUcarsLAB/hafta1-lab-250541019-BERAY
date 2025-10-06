@@ -2,7 +2,10 @@
 AD-SOYAD: Beray AKAR
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
-Müzik koleksiyonu düzenlemeye dayalı basit bir algoritma kurdum ve bunu CHATGPT kullanarak yaptım.
+Müzik koleksiyonunu düzenlemeye dayalı bir algoritmayı CHATGPT yardımıyla kurdum.
+
+"Müzik koleksiyonunu düzenlemeye dayalı bir algoritma yaz."
+CHATGPT'nin cevabı:
 koleksiyon = [
     {"isim": "Imagine", "sanatçı": "John Lennon", "tür": "Rock", "yıl": 1971, "puan": 9.2},
     {"isim": "Billie Jean", "sanatçı": "Michael Jackson", "tür": "Pop", "yıl": 1982, "puan": 9.5},
