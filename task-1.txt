@@ -1,4 +1,73 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No: 250541019
+AD-SOYAD: BERAY AKAR
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+Mükemmel omlet yapma görevini seçtim ve CHATGPT kullanarak yaptım.
+"Mükemmel omlet yapmak için basit bir algoritma yaz"
+CHATGPT'nin cevabı;
+Tabii! İşte **mükemmel omlet yapmak** için hem eğlenceli hem de algoritmik biçimde yazılmış basit bir algoritma 👇
+
+---
+
+### 🍳 **Mükemmel Omlet Algoritması**
+
+**Girdi:**
+
+* `yumurta_sayisi` (int)
+* `tuz_miktari` (çay kaşığı cinsinden)
+* `süt_miktari` (yemek kaşığı cinsinden, opsiyonel)
+* `tereyağı_miktari` (gram cinsinden)
+
+**Çıktı:**
+
+* “Mükemmel Omlet 🥚✨”
+
+---
+
+### **Algoritma:**
+
+```
+1. Başla
+2. Bir kap al.
+3. yumurta_sayisi kadar yumurta kır.
+4. Üzerine tuz_miktari kadar tuz ekle.
+5. Eğer süt_miktari > 0 ise:
+       Sütü ekle (omleti daha kabarık yapar)
+6. Malzemeleri çatal veya çırpıcı ile homojen olana kadar karıştır.
+7. Tavayı orta ateşte ısıt.
+8. tereyağı_miktari kadar tereyağını ekle ve erimesini bekle.
+9. Karışımı tavaya dök.
+10. Kenarları pişmeye başladığında spatula ile hafifçe ortadan kenarlara doğru karıştır.
+11. Altı altın rengini alınca, isteğe göre ikiye katla veya düz bırak.
+12. Üst kısmı hala hafif nemliyse, hemen servis et (fazla pişirme).
+13. “Mükemmel Omlet” hazır! 😋
+14. Bitir
+```
+
+---
+
+### 💡 **İpucu:**
+
+* Tavayı çok ısıtırsan yumurta lastik gibi olur. Orta ateş en iyisidir.
+* Ekstra lezzet için 1 tutam karabiber ve azıcık peynir harikalar yaratır.
+
+---
+
+Üstte yazdırdığım kodu fazla detaylı bulduğum için yeni bir pseudocode yazdırdım.
+CHATGPT'nin cevabı;
+ALGORITMA MUKEMMEL_OMLET
+
+BASLA
+    YUMURTA kır
+    TUZ ekle
+    SÜT ekle (isteğe bağlı)
+    KARIŞTIR
+
+    TAVAYI ısıt
+    TEREYAĞ ekle
+    KARISIMI tavaya dök
+
+    OMLET pişince ikiye katla
+    SERVİS et
+BITIR
+
