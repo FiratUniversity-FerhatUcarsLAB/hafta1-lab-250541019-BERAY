@@ -1,4 +1,64 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No: 250541019
+AD-SOYAD: Beray AKAR
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+Müzik koleksiyonu düzenlemeye dayalı basit bir algoritma kurdum ve bunu CHATGPT kullanarak yaptım.
+koleksiyon = [
+    {"isim": "Imagine", "sanatçı": "John Lennon", "tür": "Rock", "yıl": 1971, "puan": 9.2},
+    {"isim": "Billie Jean", "sanatçı": "Michael Jackson", "tür": "Pop", "yıl": 1982, "puan": 9.5},
+    {"isim": "Smells Like Teen Spirit", "sanatçı": "Nirvana", "tür": "Rock", "yıl": 1991, "puan": 9.0},
+]
+
+kriter = input("Hangi kritere göre sıralansın? (tür/sanatçı/yıl/puan): ")
+
+ters = True if kriter == "puan" or kriter == "yıl" else False
+koleksiyon.sort(key=lambda s: s[kriter], reverse=ters)
+
+for s in koleksiyon:
+    print(f"{s['sanatçı']} - {s['isim']} ({s['yıl']}) [{s['tür']}]")
+Daha sonrasında bu algoritmayı müzikleri konu ve temalarına göre ayıracak şekilde bir pseudocode haline getirdim.
+ALGORİTMA MuzikKoleksiyonunuDüzenle
+    GİRİŞ: Sarkilar (şarkı listesi)
+    ÇIKIŞ: TemaVeKonularaGöreDüzenlenmişListe
+
+    // 1. Boş bir sözlük oluştur
+    Kategoriler ← BoşSözlük()
+
+    // 2. Her şarkı için temaya göre grupla
+    HER Sarki İÇİN Sarkilar LİSTESİNDE
+        Tema ← Sarki.tema
+        Konu ← Sarki.konu
+
+        // Eğer tema kategorisi yoksa oluştur
+        EĞER Tema Kategoriler’de yoksa
+            Kategoriler[Tema] ← BoşSözlük()
+
+        // Eğer konu alt kategorisi yoksa oluştur
+        EĞER Konu Kategoriler[Tema]’da yoksa
+            Kategoriler[Tema][Konu] ← BoşListe()
+
+        // Şarkıyı uygun alt listeye ekle
+        EKLE Sarki → Kategoriler[Tema][Konu]
+    SON
+
+    // 3. Her kategori içinde isteğe bağlı sıralama (örneğin yıl veya sanatçıya göre)
+    HER Tema İÇİN Kategoriler
+        HER Konu İÇİN Kategoriler[Tema]
+            SIRALA Kategoriler[Tema][Konu] → YılaGöre(artan)
+        SON
+    SON
+
+    // 4. Sonuç olarak gruplandırılmış koleksiyonu döndür
+    DÖNDÜR Kategoriler
+SON
+Son olarak bunu örnek yaparak pekiştirmek istedim.
+Aşk:
+   İlişkiler:
+      - Adele - Hello (2015)
+      - Ed Sheeran - Perfect (2017)
+   Ayrılık:
+      - Taylor Swift - All Too Well (2012)
+      - Taylor Swift - So Long London (2024)
+   Kutlama:
+      - Daft Punk - Get Lucky (2013)
+
